@@ -142,3 +142,130 @@
 Подтверждены постепенное открытие мира, backtracking и ранний доступ к некоторым областям при наличии нужных предметов. Конкретные способности, предметы и сюжетные события, открывающие конкретные области, не названы.
 
 **Нельзя:** назначать конкретные способности или предметы как канонические progression gates без источника.
+
+## 15. Gameplay: slime resource model
+
+**Категория:** gameplay/progression  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** DOCX-SOURCE VALUE + UNCERTAIN rules
+
+`Слаймовый пистолет` расходует **5 slime health per shot** — источник DOCX-транскрипции.
+
+Не установлено:
+
+- является ли slime health отдельным ресурсом игрока/слизи;
+- каков максимум;
+- восстанавливается ли ресурс;
+- может ли ресурс достигать нуля и что это означает;
+- общий ли ресурс у всех slime weapons;
+- зависят ли затраты от оружия или slime variant.
+
+**Нельзя:** превращать значение 5 в универсальную стоимость для других slime weapons без отдельного решения.
+
+## 16. Gameplay: hand/equipment model
+
+**Категория:** gameplay/equipment  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** CONFIRMED concept + UNCERTAIN mapping
+
+Подтверждены 2 руки и возможность изменения их количества через upgrades. Подтверждено, что Slime Pistol занимает 1 руку. Управление также содержит Weapon 1 и Weapon 2.
+
+Не установлено:
+
+- являются ли Weapon 1/Weapon 2 физическими hand slots;
+- может ли оружие занимать более одной руки;
+- могут ли active items занимать руки;
+- что делает свободная рука.
+
+**Нельзя:** вводить dual-wield или two-handed rules как канон без решения.
+
+## 17. Gameplay: weapon lifecycle universality
+
+**Категория:** gameplay/equipment  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** DOCX TRANSCRIPTION
+
+Корневой DOCX категории оружия описывает: первое нажатие атаки → draw/equip, следующие нажатия → атака, 10 секунд без использования → unequip/disappear animation.
+
+Не установлено, является ли это обязательным контрактом каждого будущего оружия или только описанием существующего набора.
+
+**Нельзя:** считать 10 секунд универсальным правилом без отдельного решения.
+
+## 18. Gameplay: enemy damage formula
+
+**Категория:** gameplay/combat  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** CONFIRMED stats, formula absent
+
+HP, Defense and concrete damage values существуют в DOCX-source material для двух крыс. Источник не задаёт формулу обработки Defense.
+
+Например, `Damage = Attack - Defense` может существовать только как **PROPOSED**, а не как факт.
+
+**Нельзя:** реализовывать mitigation formula как каноническую без отдельного решения.
+
+## 19. Gameplay: shooting-rat `пельмешка` identity
+
+**Категория:** gameplay/combat/world interaction  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** DOCX-SOURCE VALUE + UNCERTAIN identity
+
+Подтвержден переход стреляющей крысы в `пельмешка`, её отдельные 400 HP / 0 Defense, собственный hitbox, pushability, damage states и explosion at maximum damage.
+
+Не установлено:
+
+- является ли это тем же enemy identity в новом state или отдельным объектом;
+- полный damage-stage sequence;
+- explosion consequences;
+- whether it can be thrown by another enemy. The last item is explicitly speculative in the source.
+
+## 20. Gameplay: chestnut launcher status
+
+**Категория:** gameplay/items  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** DOCX-SOURCE VALUE
+
+Подтверждено только то, что Chestnut is the main ammunition for a chestnut launcher in the DOCX transcription.
+
+Не установлено:
+
+- существует ли launcher как финальный/implemented weapon;
+- где он находится в progression;
+- hand requirement;
+- fire rules;
+- stack size / ammo storage;
+- whether chestnut is otherwise usable.
+
+**Нельзя:** превращать launcher role в полноценную weapon specification без отдельного источника/решения.
+
+## 21. Gameplay: active/passive item boundary
+
+**Категория:** gameplay/build  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** CONFIRMED categories, rules absent
+
+Active and passive items are confirmed categories. A safe documentation distinction is:
+
+- ACTIVE — explicitly triggered by the player;
+- PASSIVE — changes state/behavior without a separate activation.
+
+This distinction is an `INFERRED` organizational boundary, not proof of a specific slot, cooldown, stacking or resource system.
+
+## 22. Gameplay: interaction input
+
+**Категория:** gameplay/world interaction  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** CONFIRMED authored interactions, input absent
+
+Door/window interaction assets and NPC dialogue are confirmed. `CONTROLS.txt` does not define a dedicated interaction input.
+
+**Нельзя:** silently assign an unused button or repurpose an existing control in the gameplay specification.
+
+## 23. Gameplay: player defense and damage model
+
+**Категория:** gameplay/combat  
+**Статус:** DESIGN DECISION PENDING  
+**Классификация:** UNCERTAIN
+
+Enemy Defense is source-supported. Player Defense is not established. Player healing/death are established, but exact max HP, mitigation, hit invulnerability and knockback are not.
+
+**Нельзя:** copy enemy Defense into the player model by symmetry.
